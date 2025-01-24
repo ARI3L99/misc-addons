@@ -12,19 +12,19 @@ class GamificationGoalDefinition(models.Model):
     click_action = fields.Text('Click action', help='Executed when user click on goal. Keep empty to show records in domain.')
 
 
-        'computation_mode': old_fields.Selection([
-            ('manually', 'Recorded manually'),
-            ('count', 'Automatic: number of records'),
-            ('sum', 'Automatic: sum on a field'),
-            ('avg', 'Automatic: avg on a field'),
-            ('min', 'Automatic: min on a field'),
-            ('max', 'Automatic: max on a field'),
-            ('python', 'Automatic: execute a specific Python code'),
-        ],
-            string="Computation Mode",
-            help="Defined how will be computed the goals. The result of the operation will be stored in the field 'Current'.",
-            required=True),
-
+#        'computation_mode': old_fields.Selection([
+#            ('manually', 'Recorded manually'),
+#            ('count', 'Automatic: number of records'),
+#            ('sum', 'Automatic: sum on a field'),
+#            ('avg', 'Automatic: avg on a field'),
+#            ('min', 'Automatic: min on a field'),
+#            ('max', 'Automatic: max on a field'),
+#            ('python', 'Automatic: execute a specific Python code'),
+#        ],
+#            string="Computation Mode",
+#            help="Defined how will be computed the goals. The result of the operation will be stored in the field 'Current'.",
+#            required=True),
+#
 
 
 class GamificationGoal(models.Model):
